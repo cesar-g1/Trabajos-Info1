@@ -1,34 +1,19 @@
 include <stdio.h>
 
 int main() {
-		float peso, altura, bmi;
 		
-		// Solicita datos al usuario
-		printf("Ingrese el peso en kg: ");
-		scanf("%f", &peso);
-		
-		printf("Ingrese la altura en metros: ");
-		scanf("%f", &altura);
-		
-		// Calcula el BMI
-		bmi = peso / (altura * altura);
-		
-		// Muestra el resultado
-		printf("\nSu índice de masa corporal es: %.2f\n", bmi);
-		
-		// Determina la clasificación del BMI
-		printf("\nCondición: ");
-		if (bmi < 18.5) {
-			printf("Bajo peso\n");
-		} else if (bmi >= 18.5 && bmi < 25.0) {
-			printf("Normal\n");
-		} else if (bmi >= 25.0 && bmi < 30.0) {
-			printf("Sobrepeso\n");
-		} else {
-			printf("Obesidad\n");
-		}
-		
-		// Muestra la tabla de referencia
+	int peso;
+	float altura;
+	float bmi;
+	
+	printf("Ingrese su peso: ");
+	scanf("%d", &peso);
+	printf("Ingrese su altura: ");
+	scanf("%f", &altura);
+	
+	bmi=peso/(altura*altura);
+	
+	printf("Su indice de masa corporal es: %2.f\n ",bmi);
 		printf("\nÍndice | Condición\n");
 		printf("------------------------------\n");
 		printf("<18.5  | Bajo peso\n");
