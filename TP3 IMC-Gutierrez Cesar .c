@@ -5,11 +5,22 @@ int main() {
 	int peso;
 	float altura;
 	float bmi;
-	
-	printf("Ingrese su peso: ");
-	scanf("%d", &peso);
-	printf("Ingrese su altura: ");
-	scanf("%f", &altura);
+	do{
+		
+		printf("Ingrese su peso: ");
+		scanf("%d", &peso);
+		if(peso<=0){
+			printf("Error: el peso debe ser positivo.Intente nuevamente\n");
+		}
+	}while(peso<=0);
+
+	do{
+		printf("Ingrese su altura: ");
+		scanf("%f", &altura);
+		if(altura<=0){
+			printf("Error: la altura debe ser positivo.Intente nuevamente\n");
+		}
+	}while(altura<=0);
 	
 	bmi=peso/(altura*altura);
 	
